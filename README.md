@@ -1,6 +1,6 @@
 # MultiN
 
-本项目分享一种多模式键盘操作方案，主要适用于笔记本，通过结合触控板及键盘，极大的丰富了键盘的操作性。
+本项目分享一种多模式键盘操作方案，主要适用于笔记本，通过结合触控板及键盘，可极大地丰富键盘的操作性。
 
 ## 多点触控多模式键盘方案
 
@@ -56,7 +56,7 @@ Multi_2 + l -> page up
 
 ### 三指程序开启模式
 
-本模式将三指触控+按键映射成开启不同程序，现已定义的程序操控按键如下：
+本模式将三指触控+按键映射成开启不同程序，现已定义的程序操控按键如下（Multi_3表示三指触控）：
 
 Multi_3 + f -> Firefox
 
@@ -70,7 +70,7 @@ Multi_3 + i -> Intellij Idea
 
 ### 四指窗口管理模式
 
-本模式将四指触控+按键映射成窗口管理快捷键，窗口管理使用了Harmmerspoon，定义的按键如下：
+本模式将四指触控+按键映射成窗口管理快捷键，窗口管理使用了Harmmerspoon，定义的按键如下（Multi_4表示四指触控）：
 
 Multi_4 + h -> 二分屏左侧
 
@@ -99,7 +99,12 @@ Multi_4 + f -> 全屏
 
 ## 使用方式
 
-dist目录中为已生成好的配置文件，multi_n.json为Karabiner_Element配置文件，可复制或链接到Karabiner_Element配置目录中启用。Karabiner_Element配置目录为/Users/<用户名>/.config/karabiner/assets/complex_modifications。config.lua为Hammerspoon配置文件，在Harmmerspoon的配置文件中引入即可。
+dist目录中为已生成好的配置文件，可直接使用。
+
+multi_n.json为Karabiner_Element配置文件，可复制或链接到Karabiner_Element配置目录中启用。
+Karabiner_Element配置目录为/Users/<用户名>/.config/karabiner/assets/complex_modifications。
+
+config.lua为Hammerspoon配置文件，在Harmmerspoon的配置文件中引入即可。
 
 ## 自定义键盘映射
 
