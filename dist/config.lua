@@ -9,10 +9,11 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'U', 'Leftonethirds of Screen', function(
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'I', 'Centeronethirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdscenter") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'O', 'Rightonethirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsright") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'P', 'Righttwothirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsright") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'F', 'Fullscreen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("fullscreen") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("fullscreen") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'G', 'Maximize', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("maximize") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'C', 'Center Window', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("center") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("center") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'space', 'Move to Next Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
+
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'E', 'Focus Top Window', function() focusWindow("top") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'X', 'Focus Bottom Window', function() focusWindow("bottom") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'Z', 'Focus Left Window', function() focusWindow("left") end)
