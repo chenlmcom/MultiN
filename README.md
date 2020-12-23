@@ -1,6 +1,6 @@
-# MultiN
+# MultiN触控键盘模式
 
-本项目分享一种多模式键盘操作方案，主要适用于笔记本，通过结合触控板及键盘，可极大地丰富键盘的操作性。
+本项目（[项目git地址](https://github.com/chenlmcom/MultiN)）分享一种多模式键盘操作方案，主要适用于笔记本，通过结合触控板及键盘，可极大地丰富键盘的操作性。
 
 ## 多点触控多模式键盘方案
 
@@ -8,25 +8,25 @@
 
 为了方便记忆，本方案将控制方式分成四种模式：
 
-单指触控+按键：单指键盘扩充模式
+`单指触控+按键`：单指键盘扩充模式
 
-双指触控+按键：双指程序操控模式
+`双指触控+按键`：双指程序操控模式
 
-三指触控+按键：三指程序开启模式
+`三指触控+按键`：三指程序开启模式
 
-四指触控+按键：四指窗口管理模式
+`四指触控+按键`：四指窗口管理模式
 
 ### 单指键盘扩充模式
 
 本模式通过单指触控+按键的方式将笔记本小键盘扩充成全键盘，按键定义如下（Multi_1表示单指触控）：
 
-Multi_1 + h -> left
+`Multi_1 + h` -> 左方向键
 
-Multi_1 + j -> down
+`Multi_1 + j` -> 下方向键
 
-Multi_1 + k -> up
+`Multi_1 + k` -> 上方向键
 
-Multi_1 + l -> right
+`Multi_1 + l` -> 右方向键
 
 ...
 
@@ -36,21 +36,21 @@ Multi_1 + l -> right
 
 通用按键：
 
-Multi_2 + s -> Command + S
+`Multi_2 + s` -> Command + S
 
-Multi_2 + w -> Command + W
+`Multi_2 + w` -> Command + W
 
-Multi_2 + q -> Command + Q
+`Multi_2 + q` -> Command + Q
 
 Firefox:
 
-Multi_2 + h -> privious tab
+`Multi_2 + h` -> privious tab
 
-Multi_2 + l -> next tab
+`Multi_2 + l` -> next tab
 
-Multi_2 + j -> page down
+`Multi_2 + j` -> page down
 
-Multi_2 + l -> page up
+`Multi_2 + l` -> page up
 
 ...
 
@@ -58,13 +58,13 @@ Multi_2 + l -> page up
 
 本模式将三指触控+按键映射成开启不同程序，现已定义的程序操控按键如下（Multi_3表示三指触控）：
 
-Multi_3 + f -> Firefox
+`Multi_3 + f` -> Firefox
 
-Multi_3 + e -> Emacs
+`Multi_3 + e` -> Emacs
 
-Multi_3 + t -> iTerm2
+`Multi_3 + t` -> iTerm2
 
-Multi_3 + i -> Intellij Idea
+`Multi_3 + i` -> Intellij Idea
 
 ...
 
@@ -72,19 +72,19 @@ Multi_3 + i -> Intellij Idea
 
 本模式将四指触控+按键映射成窗口管理快捷键，窗口管理使用了Harmmerspoon，定义的按键如下（Multi_4表示四指触控）：
 
-Multi_4 + h -> 二分屏左侧
+`Multi_4 + h` -> 二分屏左侧
 
-Multi_4 + l -> 二分屏右侧
+`Multi_4 + l` -> 二分屏右侧
 
-Multi_4 + j -> 二分屏下侧
+`Multi_4 + j` -> 二分屏下侧
 
-Multi_4 + k -> 二分屏上侧
+`Multi_4 + k` -> 二分屏上侧
 
-Multi_4 + f -> 全屏
+`Multi_4 + f` -> 全屏
 
 ...
 
-![触控键盘方案图](images/macOS_MultiN.png "触控键盘方案图")
+![触控键盘方案图](https://raw.githubusercontent.com/chenlmcom/MultiN/main/images/macOS_MultiN.png "触控键盘方案图")
 
 ## 实现方式
 

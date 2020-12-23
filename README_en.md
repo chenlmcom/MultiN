@@ -1,6 +1,6 @@
-# MultiN
+# MultiN Touchpad Keyboard Mode
 
-This project shares a multi-mode keyboard operation scheme, which is mainly suitable for notebooks. By combining the touchpad and keyboard, the operability of the keyboard can be greatly enriched.
+This project ([github path](https://github.com/chenlmcom/MultiN)) shares a multi-mode keyboard operation scheme, which is mainly suitable for notebooks. By combining the touchpad and keyboard, the operability of the keyboard can be greatly enriched.
 
 ## Multi-touch multi-mode keyboard solution
 
@@ -8,25 +8,25 @@ The idea of ​​this solution is to map the keys of the keyboard into differen
 
 In order to facilitate memory, this program divides the control mode into four modes:
 
-Single-finger touch + key: single-finger keyboard expansion mode
+`Single-finger touch + key`: single-finger keyboard expansion mode
 
-Two-finger touch + button: two-finger program control mode
+`Two-finger touch + key`: two-finger program control mode
 
-Three-finger touch + button: three-finger program start mode
+`Three-finger touch + key`: three-finger program start mode
 
-Four-finger touch + button: Four-finger window management mode
+`Four-finger touch + key`: Four-finger window management mode
 
 ### Single finger keyboard expansion mode
 
 This mode expands the notebook keypad into a full keyboard through single-finger touch + keys. The keys are defined as follows (Multi_1 means single-finger touch):
 
-Multi_1 + h -> left
+`Multi_1 + h` -> left
 
-Multi_1 + j -> down
+`Multi_1 + j` -> down
 
-Multi_1 + k -> up
+`Multi_1 + k` -> up
 
-Multi_1 + l -> right
+`Multi_1 + l` -> right
 
 ...
 
@@ -36,21 +36,21 @@ This mode maps two-finger touch + buttons into operation shortcuts of different 
 
 General keys:
 
-Multi_2 + s -> Command + S
+`Multi_2 + s` -> Command + S
 
-Multi_2 + w -> Command + W
+`Multi_2 + w` -> Command + W
 
-Multi_2 + q -> Command + Q
+`Multi_2 + q` -> Command + Q
 
 Firefox:
 
-Multi_2 + h -> privious tab
+`Multi_2 + h` -> privious tab
 
-Multi_2 + l -> next tab
+`Multi_2 + l` -> next tab
 
-Multi_2 + j -> page down
+`Multi_2 + j` -> page down
 
-Multi_2 + l -> page up
+`Multi_2 + l` -> page up
 
 ...
 
@@ -58,13 +58,13 @@ Multi_2 + l -> page up
 
 This mode maps the three-finger touch + button to open different programs. The currently defined program control buttons are as follows (Multi_3 means three-finger touch):
 
-Multi_3 + f -> Firefox
+`Multi_3 + f` -> Firefox
 
-Multi_3 + e -> Emacs
+`Multi_3 + e` -> Emacs
 
-Multi_3 + t -> iTerm2
+`Multi_3 + t` -> iTerm2
 
-Multi_3 + i -> Intellij Idea
+`Multi_3 + i` -> Intellij Idea
 
 ...
 
@@ -72,19 +72,19 @@ Multi_3 + i -> Intellij Idea
 
 This mode maps the four-finger touch + key to window management shortcut keys. The window management uses Harmmerspoon. The defined keys are as follows (Multi_4 means four-finger touch):
 
-Multi_4 + h -> the left side of the dual screen
+`Multi_4 + h` -> the left side of the two split screen
 
-Multi_4 + l -> the right side of the two split screen
+`Multi_4 + l` -> the right side of the two split screen
 
-Multi_4 + j -> the bottom side of the two split screen
+`Multi_4 + j` -> the bottom side of the two split screen
 
-Multi_4 + k -> the upper side of the two split screen
+`Multi_4 + k` -> the upper side of the two split screen
 
-Multi_4 + f -> full screen
+`Multi_4 + f` -> full screen
 
 ...
 
-![Touch keyboard solution diagram](images/macOS_MultiN_en.png "Touch keyboard solution diagram")
+![Touch keyboard solution diagram](https://raw.githubusercontent.com/chenlmcom/MultiN/main/images/macOS_MultiN_en.png "Touch keyboard solution diagram")
 
 ## Method to realize
 
@@ -102,7 +102,7 @@ Goal This solution is only realized through open source software on macOS.
 The generated configuration files are in the dist directory and can be used directly.
 
 multi_n.json is the Karabiner_Element configuration file, which can be copied or linked to the Karabiner_Element configuration directory to enable.
-Karabiner_Element configuration directory is /Users/<user name>/.config/karabiner/assets/complex_modifications.
+Karabiner_Element configuration directory is /Users/<username>/.config/karabiner/assets/complex_modifications.
 
 config.lua is the Hammerspoon configuration file, which can be introduced in the Harmmerspoon configuration file.
 
