@@ -84,7 +84,7 @@ Multi_4 + f -> 全屏
 
 ...
 
-![触控键盘方案图](images/macOS触控键盘方案.png "触控键盘方案图")
+![触控键盘方案图](images/macOS_MultiN.png "触控键盘方案图")
 
 ## 实现方式
 

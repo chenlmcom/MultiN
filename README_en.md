@@ -84,7 +84,7 @@ Multi_4 + f -> full screen
 
 ...
 
-![Touch keyboard solution diagram](images/macOS touch keyboard solution.png "Touch keyboard solution diagram")
+![Touch keyboard solution diagram](images/macOS_MultiN_en.png "Touch keyboard solution diagram")
 
 ## Method to realize
 
