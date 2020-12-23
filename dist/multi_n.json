@@ -1710,6 +1710,27 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "s"
           },
           "to": [
@@ -1773,13 +1794,55 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "tab"
+            "key_code": "c"
           },
           "to": [
             {
-              "key_code": "tab",
+              "key_code": "c",
               "modifiers": [
-                "left_option"
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_command"
               ]
             }
           ],
