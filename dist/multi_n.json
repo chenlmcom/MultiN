@@ -1853,6 +1853,27 @@
               "value": 2
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r"
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
         }
       ]
     },
@@ -1903,7 +1924,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'iTerm2'"
+              "shell_command": "open -a 'iTerm'"
             }
           ],
           "conditions": [
@@ -2102,6 +2123,24 @@
           "to": [
             {
               "shell_command": "open -a 'QSpace'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b"
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'iThoughtsX'"
             }
           ],
           "conditions": [
@@ -2546,6 +2585,30 @@
                 "left_command",
                 "left_option",
                 "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_command",
+                "left_option",
+                "left_control",
+                "left_shift"
               ]
             }
           ],

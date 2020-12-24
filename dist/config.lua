@@ -1,34 +1,76 @@
 -- My hotkeys
 -- 窗口管理
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'H', 'Lefthalf of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfleft") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'L', 'Righthalf of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfright") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'K', 'Uphalf of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfup") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'J', 'Downhalf of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfdown") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'Y', 'Lefttwothirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsleft") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'U', 'Leftonethirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsleft") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'I', 'Centeronethirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdscenter") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'O', 'Rightonethirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsright") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'P', 'Righttwothirds of Screen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsright") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("fullscreen") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'G', 'Maximize', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("maximize") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("center") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'space', 'Move to Next Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'H', 'Lefthalf of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfleft") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'L', 'Righthalf of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfright") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'K', 'Uphalf of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfup") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'J', 'Downhalf of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfdown") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'Y', 'Lefttwothirds of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsleft") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'U', 'Leftonethirds of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsleft") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'I', 'Centeronethirds of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdscenter") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'O', 'Rightonethirds of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsright") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'P', 'Righttwothirds of Screen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsright") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("fullscreen") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'G', 'Maximize',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("maximize") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window',
+ function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("center") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'space', 'Move to Next Monitor',
+ function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
 
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'E', 'Focus Top Window', function() focusWindow("top") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'X', 'Focus Bottom Window', function() focusWindow("bottom") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'Z', 'Focus Left Window', function() focusWindow("left") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'V', 'Focus Right Window', function() focusWindow("right") end)
--- Move cursor
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'W', 'Move Cursor to TopLeft', function() moveCursor("topLeft") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'E', 'Move Cursor to TopLeft', function() moveCursor("top") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'R', 'Move Cursor to TopLeft', function() moveCursor("topRight") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'S', 'Move Cursor to TopLeft', function() moveCursor("left") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'D', 'Move Cursor to Center', function() moveCursor("center") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'F', 'Move Cursor to TopLeft', function() moveCursor("right") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'X', 'Move Cursor to TopLeft', function() moveCursor("bottomLeft") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'C', 'Move Cursor to TopLeft', function() moveCursor("bottom") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'V', 'Move Cursor to TopLeft', function() moveCursor("bottomRight") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'A', 'Move Cursor to Next Screen', function() moveCursorNextScreen() end)
+ -- Focus Other Window
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'E', 'Focus Top Window',
+ function() focusWindow("top") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'X', 'Focus Bottom Window',
+ function() focusWindow("bottom") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'Z', 'Focus Left Window',
+ function() focusWindow("left") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'V', 'Focus Right Window',
+ function() focusWindow("right") end)
+
+ -- Move Cursor
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'W', 'Move Cursor to TopLeft',
+ function() moveCursor("topLeft") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'E', 'Move Cursor to TopLeft',
+ function() moveCursor("top") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'R', 'Move Cursor to TopLeft',
+ function() moveCursor("topRight") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'S', 'Move Cursor to TopLeft',
+ function() moveCursor("left") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'D', 'Move Cursor to Center',
+ function() moveCursor("center") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'F', 'Move Cursor to TopLeft',
+ function() moveCursor("right") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'X', 'Move Cursor to TopLeft',
+ function() moveCursor("bottomLeft") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'C', 'Move Cursor to TopLeft',
+ function() moveCursor("bottom") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'V', 'Move Cursor to TopLeft',
+ function() moveCursor("bottomRight") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'A', 'Move Cursor to Next Screen',
+ function() moveCursorNextScreen() end)
+
+ -- Toggle Dark Mode
+ hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'tab', 'Toggle Dark Mode',
+ function() toggleTheme() end)
+
+function toggleTheme()
+    local success, darkMode = hs.osascript.applescript('tell application "System Events" to tell appearance preferences to get dark mode')
+    if darkMode then
+        hs.osascript.applescript('tell application "System Events" to tell appearance preferences to set dark mode to false')
+    else
+        hs.osascript.applescript('tell application "System Events" to tell appearance preferences to set dark mode to true')
+    end
+end
 
 function focusWindow(option)
     local cwin = hs.window.focusedWindow()
