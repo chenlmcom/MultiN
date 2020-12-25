@@ -71,12 +71,15 @@ for sec in secs:
           })
       else:
         # key_code
-        tos = to.split(" ")
-        # print(tos[0:len(tos) - 1])
-        manTos.append({
-          "key_code": tos[len(tos) - 1],
-          "modifiers": tos[0:len(tos) - 1]
-        })
+        tos = to.split(",")
+        for to in tos:
+          keys = to.split(" ")
+          # print(tos[0:len(tos) - 1])
+          manTos.append({
+            "key_code": keys[len(keys) - 1],
+            "modifiers": keys[0:len(keys) - 1]
+          })
+
       manipulators.append({
             "type": "basic",
             "from": {
