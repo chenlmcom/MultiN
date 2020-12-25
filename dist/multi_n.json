@@ -1236,6 +1236,35 @@
               "value": 2
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b"
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": []
+            },
+            {
+              "key_code": "b",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
         }
       ]
     },
