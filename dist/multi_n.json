@@ -5,636 +5,6 @@
   ],
   "rules": [
     {
-      "description": "Multi_1 Lower Mode: Extend Number Keyboard And Media Keys",
-      "available_since": "12.6.9",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar"
-          },
-          "to": [
-            {
-              "key_code": "keypad_equal_sign",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "m"
-          },
-          "to": [
-            {
-              "key_code": "keypad_0",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "comma"
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "period"
-          },
-          "to": [
-            {
-              "key_code": "keypad_period",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "slash"
-          },
-          "to": [
-            {
-              "key_code": "keypad_plus",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "j"
-          },
-          "to": [
-            {
-              "key_code": "keypad_1",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "k"
-          },
-          "to": [
-            {
-              "key_code": "keypad_2",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "l"
-          },
-          "to": [
-            {
-              "key_code": "keypad_3",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "semicolon"
-          },
-          "to": [
-            {
-              "key_code": "keypad_hyphen",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "u"
-          },
-          "to": [
-            {
-              "key_code": "keypad_4",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "i"
-          },
-          "to": [
-            {
-              "key_code": "keypad_5",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "o"
-          },
-          "to": [
-            {
-              "key_code": "keypad_6",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "p"
-          },
-          "to": [
-            {
-              "key_code": "keypad_asterisk",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "7"
-          },
-          "to": [
-            {
-              "key_code": "keypad_7",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "8"
-          },
-          "to": [
-            {
-              "key_code": "keypad_8",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "9"
-          },
-          "to": [
-            {
-              "key_code": "keypad_9",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0"
-          },
-          "to": [
-            {
-              "key_code": "keypad_slash",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "v"
-          },
-          "to": [
-            {
-              "key_code": "play_or_pause",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "c"
-          },
-          "to": [
-            {
-              "key_code": "mute",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "x"
-          },
-          "to": [
-            {
-              "key_code": "display_brightness_increment",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "z"
-          },
-          "to": [
-            {
-              "key_code": "display_brightness_decrement",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "b"
-          },
-          "to": [
-            {
-              "key_code": "eject",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "a"
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "s"
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "w"
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d"
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            },
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_lower_half_area",
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description": "Multi_1 Mode: Extend Keyboard",
       "available_since": "12.6.9",
       "manipulators": [
@@ -1380,15 +750,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.toketaware.ithoughtsx"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1407,15 +777,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.toketaware.ithoughtsx"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1434,15 +804,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.toketaware.ithoughtsx"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1461,15 +831,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.toketaware.ithoughtsx"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         }
@@ -1494,15 +864,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1521,15 +891,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1548,15 +918,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1575,15 +945,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1602,15 +972,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1629,15 +999,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "org.mozilla.firefox"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         }
@@ -1662,15 +1032,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.apple.finder"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         },
@@ -1689,15 +1059,15 @@
           ],
           "conditions": [
             {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 2
-            },
-            {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.apple.finder"
               ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
             }
           ]
         }
@@ -2713,6 +2083,506 @@
               "type": "variable_if",
               "name": "multitouch_extension_finger_count_total",
               "value": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Multi_5 Mode: Extend Number Keyboard And Media Keys",
+      "available_since": "12.6.9",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar"
+          },
+          "to": [
+            {
+              "key_code": "keypad_equal_sign",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "keypad_0",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "keypad_period",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash"
+          },
+          "to": [
+            {
+              "key_code": "keypad_plus",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "key_code": "keypad_1",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k"
+          },
+          "to": [
+            {
+              "key_code": "keypad_2",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "to": [
+            {
+              "key_code": "keypad_3",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon"
+          },
+          "to": [
+            {
+              "key_code": "keypad_hyphen",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u"
+          },
+          "to": [
+            {
+              "key_code": "keypad_4",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "keypad_5",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o"
+          },
+          "to": [
+            {
+              "key_code": "keypad_6",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p"
+          },
+          "to": [
+            {
+              "key_code": "keypad_asterisk",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7"
+          },
+          "to": [
+            {
+              "key_code": "keypad_7",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8"
+          },
+          "to": [
+            {
+              "key_code": "keypad_8",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9"
+          },
+          "to": [
+            {
+              "key_code": "keypad_9",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0"
+          },
+          "to": [
+            {
+              "key_code": "keypad_slash",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "play_or_pause",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "mute",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x"
+          },
+          "to": [
+            {
+              "key_code": "display_brightness_increment",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "z"
+          },
+          "to": [
+            {
+              "key_code": "display_brightness_decrement",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b"
+          },
+          "to": [
+            {
+              "key_code": "eject",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 5
             }
           ]
         }

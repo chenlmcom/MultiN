@@ -96,20 +96,21 @@ function moveCursorNextScreen()
 end
 
 function moveCursor(option)
-    local cwin = hs.window.focusedWindow()
-    local wf = cwin:frame()
-    local cscreen = cwin:screen()
+    -- local cwin = hs.window.focusedWindow()
+    -- local wf = cwin:frame()
+    -- local cscreen = cwin:screen()
+    local cscreen = hs.mouse.getCurrentScreen()
     local cres = cscreen:fullFrame()
     local x = cres.x
     local y = cres.y
     local w = cres.w
     local h = cres.h
-    if cwin then
-        x = wf.x
-        y = wf.y
-        w = wf.w
-        h = wf.h
-    end
+    -- if cwin then
+        -- x = wf.x
+        -- y = wf.y
+        -- w = wf.w
+        -- h = wf.h
+    -- end
     if option == "top" then
         hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/6})
     elseif option == "bottom" then

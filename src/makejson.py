@@ -24,29 +24,26 @@ for sec in secs:
       data['rules'] = []
     conditions = []
     options = cf.options(sec)
-    if 'total' in options:
-      conditions.append({
-        "type": "variable_if",
-        "name": "multitouch_extension_finger_count_total",
-        "value": int(cf.get(sec, 'total'))
-      })
-    if 'area' in options:
-      conditions.append({
-        "type": "variable_if",
-        "name": "multitouch_extension_finger_count_" + cf.get(sec, 'area'),
-        "value": int(cf.get(sec, 'total'))
-      })
+
+    # conditions
     if 'apps' in options:
       conditions.append({
         "type": "frontmost_application_if",
         "bundle_identifiers": cf.get(sec, 'apps').split(',')
       })
 
+    for option in options:
+      if option in ['total', 'lower_half_area', 'upper_half_area', 'left_half_area', 'right_half_area']:
+        conditions.append({
+          "type": "variable_if",
+          "name": "multitouch_extension_finger_count_" + option,
+          "value": int(cf.get(sec, option))
+        })
 
     # manipulators
     manipulators = []
     for option in options:
-      if option in ['total', 'area', 'desc', 'apps']:
+      if option in ['total', 'desc', 'apps', 'lower_half_area', 'upper_half_area', 'left_half_area', 'right_half_area']:
         continue
       to = cf.get(sec, option)
       toMethod = to.split(":")
