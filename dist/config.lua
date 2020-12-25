@@ -1,4 +1,3 @@
--- My hotkeys
 -- 窗口管理
 -- 二分屏
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'H', 'Lefthalf of Screen',
@@ -22,6 +21,22 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'O', 'Rightonethirds of Screen',
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'P', 'Righttwothirds of Screen',
  function() moveAndResize("twothirdsright") end)
 
+-- 四分屏
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '1', 'TopLeft of Screen',
+ function() moveAndResize("cornerNW") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '2', 'TopRight of Screen',
+ function() moveAndResize("cornerNE") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '3', 'BottomLeft of Screen',
+ function() moveAndResize("cornerSW") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '4', 'BottomRight of Screen',
+ function() moveAndResize("cornerSE") end)
+
+-- 缩放
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '5', 'Expand Window',
+ function() moveAndResize("expand") end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '6', 'Shrink Window',
+ function() moveAndResize("shrink") end)
+
 -- 全屏及最大化
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen',
  function() moveAndResize("fullscreen") end)
@@ -32,7 +47,7 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window',
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'space', 'Move to Next Monitor',
  function() moveToScreen("next") end)
 
- -- Focus Other Window
+ -- 聚焦其他窗口
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'E', 'Focus Top Window',
  function() focusWindow("top") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'X', 'Focus Bottom Window',
@@ -42,7 +57,7 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'Z', 'Focus Left Window',
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'V', 'Focus Right Window',
  function() focusWindow("right") end)
 
- -- Move Cursor
+ -- 移动光标
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'W', 'Move Cursor to TopLeft',
  function() moveCursor("topLeft") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'E', 'Move Cursor to TopLeft',
@@ -63,8 +78,10 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'V', 'Move Cursor to TopLeft',
  function() moveCursor("bottomRight") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'A', 'Move Cursor to Next Screen',
  function() moveCursorNextScreen() end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'B', 'Show Cursor',
+ function() showMouse() end)
 
- -- Toggle Dark Mode
+ -- 切换深色模式
  hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'tab', 'Toggle Dark Mode',
  function() toggleTheme() end)
 
@@ -98,7 +115,25 @@ function moveCursorNextScreen()
     local w = cres.w
     local h = cres.h
     hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
+    focusWindowTop()
     showMouse()
+end
+
+function focusWindowTop()
+    local cscreen = hs.mouse.getCurrentScreen()
+    local cpos = hs.mouse.getAbsolutePosition()
+    local windows = hs.window.orderedWindows()
+    for i, window in ipairs(windows) do
+        local wrect = window:frame()
+        if contains(wrect, cpos) then
+            window:focus()
+            break
+        end
+    end
+end
+
+function contains(rect, pos)
+    return pos.x >= rect.x and pos.y >= rect.y and pos.x <= rect.x + rect.w and pos.y <= rect.y + rect.h
 end
 
 function showMouse()
@@ -198,6 +233,26 @@ function moveAndResize(option)
             cwin:setFrame({x=cres.x+cres.w*2/3, y=cres.y, w=cres.w/3, h=cres.h})
         elseif option == "onethirdscenter" then
             cwin:setFrame({x=cres.x+cres.w/3, y=cres.y, w=cres.w/3, h=cres.h})
+        end
+    else
+        hs.alert.show("No focused window!")
+    end
+end
+
+function moveToScreen(direction)
+    local cwin = hs.window.focusedWindow()
+    if cwin then
+        local cscreen = cwin:screen()
+        if direction == "up" then
+            cwin:moveOneScreenNorth()
+        elseif direction == "down" then
+            cwin:moveOneScreenSouth()
+        elseif direction == "left" then
+            cwin:moveOneScreenWest()
+        elseif direction == "right" then
+            cwin:moveOneScreenEast()
+        elseif direction == "next" then
+            cwin:moveToScreen(cscreen:next())
         end
     else
         hs.alert.show("No focused window!")
