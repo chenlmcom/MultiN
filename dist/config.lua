@@ -1,31 +1,36 @@
 -- My hotkeys
 -- 窗口管理
+-- 二分屏
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'H', 'Lefthalf of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfleft") end)
+ function() moveAndResize("halfleft") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'L', 'Righthalf of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfright") end)
+ function() moveAndResize("halfright") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'K', 'Uphalf of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfup") end)
+ function() moveAndResize("halfup") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'J', 'Downhalf of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("halfdown") end)
+ function() moveAndResize("halfdown") end)
+
+-- 三分屏
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'Y', 'Lefttwothirds of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsleft") end)
+ function() moveAndResize("twothirdsleft") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'U', 'Leftonethirds of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsleft") end)
+ function() moveAndResize("onethirdsleft") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'I', 'Centeronethirds of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdscenter") end)
+ function() moveAndResize("onethirdscenter") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'O', 'Rightonethirds of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("onethirdsright") end)
+ function() moveAndResize("onethirdsright") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'P', 'Righttwothirds of Screen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("twothirdsright") end)
+ function() moveAndResize("twothirdsright") end)
+
+-- 全屏及最大化
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("fullscreen") end)
+ function() moveAndResize("fullscreen") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'G', 'Maximize',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("maximize") end)
+ function() moveAndResize("maximize") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window',
- function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("center") end)
+ function() moveAndResize("center") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'space', 'Move to Next Monitor',
- function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
+ function() moveToScreen("next") end)
 
  -- Focus Other Window
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'E', 'Focus Top Window',
@@ -129,5 +134,56 @@ function moveCursor(option)
         hs.mouse.setAbsolutePosition({x=x+w*5/6, y=y+h*5/6})
     elseif option == "center" then
         hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
+    end
+end
+
+function moveAndResize(option)
+    local cwin = hs.window.focusedWindow()
+    local gridparts = 30
+    if cwin then
+        local cscreen = cwin:screen()
+        local cres = cscreen:fullFrame()
+        local stepw = cres.w/gridparts
+        local steph = cres.h/gridparts
+        local wf = cwin:frame()
+        if option == "halfleft" then
+            cwin:setFrame({x=cres.x, y=cres.y, w=cres.w/2, h=cres.h})
+        elseif option == "halfright" then
+            cwin:setFrame({x=cres.x+cres.w/2, y=cres.y, w=cres.w/2, h=cres.h})
+        elseif option == "halfup" then
+            cwin:setFrame({x=cres.x, y=cres.y, w=cres.w, h=cres.h/2})
+        elseif option == "halfdown" then
+            cwin:setFrame({x=cres.x, y=cres.y+cres.h/2, w=cres.w, h=cres.h/2})
+        elseif option == "cornerNW" then
+            cwin:setFrame({x=cres.x, y=cres.y, w=cres.w/2, h=cres.h/2})
+        elseif option == "cornerNE" then
+            cwin:setFrame({x=cres.x+cres.w/2, y=cres.y, w=cres.w/2, h=cres.h/2})
+        elseif option == "cornerSW" then
+            cwin:setFrame({x=cres.x, y=cres.y+cres.h/2, w=cres.w/2, h=cres.h/2})
+        elseif option == "cornerSE" then
+            cwin:setFrame({x=cres.x+cres.w/2, y=cres.y+cres.h/2, w=cres.w/2, h=cres.h/2})
+        elseif option == "maximize" then
+            cwin:maximize()
+        elseif option == "fullscreen" then
+            cwin:toggleFullScreen()
+        elseif option == "center" then
+            cwin:centerOnScreen()
+        elseif option == "expand" then
+            cwin:setFrame({x=wf.x-stepw, y=wf.y-steph, w=wf.w+(stepw*2), h=wf.h+(steph*2)})
+        elseif option == "shrink" then
+            cwin:setFrame({x=wf.x+stepw, y=wf.y+steph, w=wf.w-(stepw*2), h=wf.h-(steph*2)})
+        elseif option == "twothirdsleft" then
+            cwin:setFrame({x=cres.x, y=cres.y, w=cres.w*2/3, h=cres.h})
+        elseif option == "twothirdsright" then
+            cwin:setFrame({x=cres.x+cres.w/3, y=cres.y, w=cres.w*2/3, h=cres.h})
+        elseif option == "onethirdsleft" then
+            cwin:setFrame({x=cres.x, y=cres.y, w=cres.w/3, h=cres.h})
+        elseif option == "onethirdsright" then
+            cwin:setFrame({x=cres.x+cres.w*2/3, y=cres.y, w=cres.w/3, h=cres.h})
+        elseif option == "onethirdscenter" then
+            cwin:setFrame({x=cres.x+cres.w/3, y=cres.y, w=cres.w/3, h=cres.h})
+        end
+    else
+        hs.alert.show("No focused window!")
     end
 end

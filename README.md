@@ -110,8 +110,8 @@ Firefox:
 
 ## 所用软件
 
-* Hammerspoon + WinWin插件
-* Karabiner-Element
+* [Hammerspoon](http://www.hammerspoon.org/)([docs](http://www.hammerspoon.org/docs/index.html))
+* [Karabiner-Element](http://www.hammerspoon.org/docs/index.html)([docs](https://karabiner-elements.pqrs.org/docs/))
 
   需开启Multi Touch插件
 
