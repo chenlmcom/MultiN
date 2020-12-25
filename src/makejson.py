@@ -46,34 +46,34 @@ for sec in secs:
       if option in ['total', 'desc', 'apps', 'lower_half_area', 'upper_half_area', 'left_half_area', 'right_half_area']:
         continue
       to = cf.get(sec, option)
-      toMethod = to.split(":")
+      tos = to.split(",")
       manTos = []
-      if len(toMethod) == 2:
-        cmd = toMethod[0]
-        if cmd == 'shell':
-          manTos.append({
-            "shell_command": toMethod[1]
-          })
-        elif cmd == 'button':
-          manTos.append({
-            "pointing_button": toMethod[1]
-          })
-        elif cmd == 'mouse':
-          move = toMethod[1].split(' ')
-          manTos.append({
-            "mouse_key": {
-                "x": move[0],
-                "y": move[1],
-                "vertical_wheel": move[2],
-                "horizontal_wheel": move[3],
-                "speed_multiplier": 1.0
-            }
-          })
-      else:
-        # key_code
-        tos = to.split(",")
-        for to in tos:
-          keys = to.split(" ")
+      for key in tos:
+        toMethod = key.split(":")
+        if len(toMethod) == 2:
+          cmd = toMethod[0]
+          if cmd == 'shell':
+            manTos.append({
+              "shell_command": toMethod[1]
+            })
+          elif cmd == 'button':
+            manTos.append({
+              "pointing_button": toMethod[1]
+            })
+          elif cmd == 'mouse':
+            move = toMethod[1].split(' ')
+            manTos.append({
+              "mouse_key": {
+                  "x": move[0],
+                  "y": move[1],
+                  "vertical_wheel": move[2],
+                  "horizontal_wheel": move[3],
+                  "speed_multiplier": 1.0
+              }
+            })
+        else:
+          # key_code
+          keys = key.split(" ")
           # print(tos[0:len(tos) - 1])
           manTos.append({
             "key_code": keys[len(keys) - 1],

@@ -665,6 +665,9 @@
                 "left_option",
                 "left_control"
               ]
+            },
+            {
+              "pointing_button": "button1"
             }
           ],
           "conditions": [

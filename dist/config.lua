@@ -98,6 +98,21 @@ function moveCursorNextScreen()
     local w = cres.w
     local h = cres.h
     hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
+    showMouse()
+end
+
+function showMouse()
+    local cpos = hs.mouse.getAbsolutePosition()
+    local show = hs.canvas.new{x=cpos.x-20,y=cpos.y-20,h=40,w=40}:appendElements({
+            action = "fill",
+            center = { x = "0.5", y = "0.5" },
+            fillColor = { alpha = 0.5, red = 1.0  },
+            radius = ".5",
+            type = "circle",
+        }):show()
+    hs.timer.delayed.new(0.5, function()
+        show:hide(0.5)
+    end):start()
 end
 
 function moveCursor(option)
@@ -135,6 +150,7 @@ function moveCursor(option)
     elseif option == "center" then
         hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
     end
+    showMouse()
 end
 
 function moveAndResize(option)
