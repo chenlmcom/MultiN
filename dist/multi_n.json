@@ -728,6 +728,44 @@
               "value": 1
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "play_or_pause",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "mute",
+              "modifiers": []
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -1062,6 +1100,40 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.apple.finder"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Multi_2 Mail Mode: Application Operations",
+      "available_since": "12.6.9",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "key_code": "d",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.mail"
               ]
             },
             {
@@ -2437,7 +2509,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "c"
+            "key_code": "a"
           },
           "to": [
             {
@@ -2480,101 +2552,6 @@
           "to": [
             {
               "key_code": "display_brightness_decrement",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "b"
-          },
-          "to": [
-            {
-              "key_code": "eject",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "a"
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "s"
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "w"
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": []
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 5
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d"
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
               "modifiers": []
             }
           ],
