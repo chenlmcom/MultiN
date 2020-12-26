@@ -105,6 +105,7 @@ function focusWindow(option)
     elseif option == "right" then
         cwin:focusWindowEast()
     end
+    centerCursor()
 end
 
 function moveCursorNextScreen()
@@ -130,6 +131,7 @@ function focusWindowTop()
             break
         end
     end
+    centerCursor()
 end
 
 function contains(rect, pos)
@@ -188,6 +190,25 @@ function moveCursor(option)
     showMouse()
 end
 
+function centerCursor()
+    local cwin = hs.window.focusedWindow()
+    local wf = cwin:frame()
+    local cscreen = hs.mouse.getCurrentScreen()
+    local cres = cscreen:fullFrame()
+    local x = cres.x
+    local y = cres.y
+    local w = cres.w
+    local h = cres.h
+    if cwin then
+        x = wf.x
+        y = wf.y
+        w = wf.w
+        h = wf.h
+    end
+    hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
+    showMouse()
+end
+
 function moveAndResize(option)
     local cwin = hs.window.focusedWindow()
     local gridparts = 30
@@ -234,6 +255,7 @@ function moveAndResize(option)
         elseif option == "onethirdscenter" then
             cwin:setFrame({x=cres.x+cres.w/3, y=cres.y, w=cres.w/3, h=cres.h})
         end
+        centerCursor()
     else
         hs.alert.show("No focused window!")
     end
@@ -254,6 +276,7 @@ function moveToScreen(direction)
         elseif direction == "next" then
             cwin:moveToScreen(cscreen:next())
         end
+        centerCursor()
     else
         hs.alert.show("No focused window!")
     end
