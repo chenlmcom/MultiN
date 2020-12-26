@@ -169,21 +169,21 @@ function moveCursor(option)
         -- h = wf.h
     -- end
     if option == "top" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/6})
+        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/8})
     elseif option == "bottom" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h*5/6})
+        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h*7/8})
     elseif option == "left" then
-        hs.mouse.setAbsolutePosition({x=x+w/6, y=y+h/2})
+        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h/2})
     elseif option == "right" then
-        hs.mouse.setAbsolutePosition({x=x+w*5/6, y=y+h/2})
+        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h/2})
     elseif option == "topLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/6, y=y+h/6})
+        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h/8})
     elseif option == "topRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*5/6, y=y+h/6})
+        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h/8})
     elseif option == "bottomLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/6, y=y+h*5/6})
+        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h*7/8})
     elseif option == "bottomRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*5/6, y=y+h*5/6})
+        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h*7/8})
     elseif option == "center" then
         hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
     end
