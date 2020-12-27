@@ -124,14 +124,18 @@ function focusWindowTop()
     local cscreen = hs.mouse.getCurrentScreen()
     local cpos = hs.mouse.getAbsolutePosition()
     local windows = hs.window.orderedWindows()
+    local focused = true
     for i, window in ipairs(windows) do
         local wrect = window:frame()
         if contains(wrect, cpos) then
             window:focus()
+            focused = false
             break
         end
     end
-    centerCursor()
+    if (focused) then
+        hs.window.desktop():focus()
+    end
 end
 
 function contains(rect, pos)
@@ -169,21 +173,21 @@ function moveCursor(option)
         -- h = wf.h
     -- end
     if option == "top" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/8})
+        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/7})
     elseif option == "bottom" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h*7/8})
+        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h*6/7})
     elseif option == "left" then
-        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h/2})
+        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h/2})
     elseif option == "right" then
-        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h/2})
+        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h/2})
     elseif option == "topLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h/8})
+        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h/7})
     elseif option == "topRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h/8})
+        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h/7})
     elseif option == "bottomLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/8, y=y+h*7/8})
+        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h*6/7})
     elseif option == "bottomRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*7/8, y=y+h*7/8})
+        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h*6/7})
     elseif option == "center" then
         hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
     end
