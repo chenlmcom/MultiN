@@ -2070,6 +2070,34 @@
               "value": 2
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "m",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.finder"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
         }
       ]
     },
@@ -2217,6 +2245,122 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Multi_2 Intellij Idea Mode: Application Operations",
+      "available_since": "12.6.9",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9"
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.jetbrains.intellij"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0"
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.jetbrains.intellij"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.jetbrains.intellij"
               ]
             },
             {
