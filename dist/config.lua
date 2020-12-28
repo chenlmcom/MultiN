@@ -38,9 +38,9 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, '6', 'Shrink Window',
  function() moveAndResize("shrink") end)
 
 -- 全屏及最大化
-hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Fullscreen',
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'G', 'Fullscreen',
  function() moveAndResize("fullscreen") end)
-hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'G', 'Maximize',
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'F', 'Maximize',
  function() moveAndResize("maximize") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'C', 'Center Window',
  function() moveAndResize("center") end)
@@ -80,6 +80,8 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'A', 'Move Cursor to Next Screen',
  function() moveCursorNextScreen() end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'B', 'Show Cursor',
  function() showMouse() end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'Z', 'Center Cursor',
+ function() centerCursor() end)
 
  -- 切换深色模式
  hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'tab', 'Toggle Dark Mode',
@@ -94,6 +96,7 @@ function toggleTheme()
     end
 end
 
+--[[ 聚焦相对位置的窗口 ]]
 function focusWindow(option)
     local cwin = hs.window.focusedWindow()
     if option == "top" then
@@ -108,6 +111,7 @@ function focusWindow(option)
     centerCursor()
 end
 
+--[[ 移动鼠标到下一个屏幕 ]]
 function moveCursorNextScreen()
     local cscreen = hs.mouse.getCurrentScreen()
     local cres = cscreen:next():fullFrame()
@@ -120,6 +124,7 @@ function moveCursorNextScreen()
     showMouse()
 end
 
+--[[ 聚焦当前屏幕最前面的窗口 ]]
 function focusWindowTop()
     local cscreen = hs.mouse.getCurrentScreen()
     local cpos = hs.mouse.getAbsolutePosition()
@@ -142,6 +147,7 @@ function contains(rect, pos)
     return pos.x >= rect.x and pos.y >= rect.y and pos.x <= rect.x + rect.w and pos.y <= rect.y + rect.h
 end
 
+--[[ 显示鼠标当前位置 ]]
 function showMouse()
     local cpos = hs.mouse.getAbsolutePosition()
     local show = hs.canvas.new{x=cpos.x-20,y=cpos.y-20,h=40,w=40}:appendElements({
@@ -156,6 +162,7 @@ function showMouse()
     end):start()
 end
 
+--[[ 移动鼠标到屏幕的相应位置 ]]
 function moveCursor(option)
     -- local cwin = hs.window.focusedWindow()
     -- local wf = cwin:frame()
@@ -194,6 +201,7 @@ function moveCursor(option)
     showMouse()
 end
 
+-- 居中鼠标到聚焦的窗口，或者到屏幕中心
 function centerCursor()
     local cwin = hs.window.focusedWindow()
     local wf = cwin:frame()

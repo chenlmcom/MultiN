@@ -73,21 +73,40 @@ for sec in secs:
             })
         else:
           # key_code
-          keys = key.split(" ")
-          # print(tos[0:len(tos) - 1])
-          manTos.append({
-            "key_code": keys[len(keys) - 1],
-            "modifiers": keys[0:len(keys) - 1]
-          })
+          if key.find(" ") != -1:
+            keys = key.split(" ")
+            # print(tos[0:len(tos) - 1])
+            manTos.append({
+              "key_code": keys[len(keys) - 1],
+              "modifiers": keys[0:len(keys) - 1]
+            })
+          else:
+            manTos.append({
+              "key_code": key
+            })
 
-      manipulators.append({
-            "type": "basic",
-            "from": {
-              "key_code": option
-            },
-            "to": manTos,
-            "conditions": conditions
-          })
+      if option.find(".") != -1:
+        froms = option.split(".")
+        manipulators.append({
+              "type": "basic",
+              "from": {
+                "key_code": froms[len(froms) - 1],
+                "modifiers": {
+                  "mandatory": froms[0:len(froms) - 1]
+                }
+              },
+              "to": manTos,
+              "conditions": conditions
+            })
+      else:
+        manipulators.append({
+              "type": "basic",
+              "from": {
+                "key_code": option,
+              },
+              "to": manTos,
+              "conditions": conditions
+            })
     # rule
     desc = ""
     if 'desc' in options:
