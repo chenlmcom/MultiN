@@ -67,6 +67,36 @@ def combine(li):
       reli += addli
   return reli
 
+def manipulator(key, modifiers, manTos, conditions):
+  '''
+  生成manipulator配置信息
+  '''
+  manipulator = {
+    "type": "basic",
+    "from": {},
+    "to": manTos,
+    "conditions": conditions
+  }
+  mod = copy.deepcopy(modifiers)
+  # 固定按键中含有.为组合键
+  if key.find(".") != -1:
+    keys = key.split(".")
+    key_code = keys[len(keys) - 1]
+    mod.extend(keys[0:len(keys) - 1])
+  else:
+    key_code = key
+
+  if mod:
+    manipulator["from"] = {
+      "key_code": key_code,
+      "modifiers": {
+        "mandatory": mod
+      }
+    }
+  else:
+    manipulator["from"] = { "key_code": key_code }
+  return manipulator
+
 configFile = 'config.ini'
 distFile = '../dist/multi_n.json'
 
@@ -118,49 +148,11 @@ for sec in secs:
           syncModifiers = combine(froms[0:len(froms) - 1]) # 前面几项为同步按键组合
           for syncModifier in syncModifiers:
             manTos = genManTos(to, syncModifier)
-            manipulator = {
-              "type": "basic",
-              "from": {},
-              "to": manTos,
-              "conditions": conditions
-            }
-            manipulators.append(manipulator)
             modifiers = copy.deepcopy(syncModifier)
-            # 固定按键中含有.为组合键
-            if key.find(".") != -1:
-              keys = key.split(".")
-              key_code = keys[len(keys) - 1]
-              modifiers.extend(keys[0:len(keys) - 1])
-            else:
-              key_code = key
-            manipulator["from"] = {
-              "key_code": key_code,
-              "modifiers": {
-                "mandatory": modifiers
-              }
-            }
+            manipulators.append(manipulator(key, modifiers, manTos, conditions))
         else:
           manTos = genManTos(to, [])
-          manipulator = {
-            "type": "basic",
-            "from": {},
-            "to": manTos,
-            "conditions": conditions
-          }
-          manipulators.append(manipulator)
-          # 固定按键中含有.为组合键
-          if key.find(".") != -1:
-            keys = key.split(".")
-            key_code = keys[len(keys) - 1]
-            modifiers = keys[0:len(keys) - 1]
-            manipulator["from"] = {
-              "key_code": key_code,
-              "modifiers": {
-                "mandatory": modifiers
-              }
-            }
-          else:
-            manipulator["from"] = {"key_code": key}
+          manipulators.append(manipulator(key, [], manTos, conditions))
     # rule
     desc = ""
     if 'desc' in options:
