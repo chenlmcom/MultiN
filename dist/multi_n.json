@@ -11,534 +11,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "1"
-          },
-          "to": [
-            {
-              "key_code": "f1"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "2"
-          },
-          "to": [
-            {
-              "key_code": "f2"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "3"
-          },
-          "to": [
-            {
-              "key_code": "f3"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "4"
-          },
-          "to": [
-            {
-              "key_code": "f4"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "5"
-          },
-          "to": [
-            {
-              "key_code": "f5"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "6"
-          },
-          "to": [
-            {
-              "key_code": "f6"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "7"
-          },
-          "to": [
-            {
-              "key_code": "f7"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "8"
-          },
-          "to": [
-            {
-              "key_code": "f8"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "9"
-          },
-          "to": [
-            {
-              "key_code": "f9"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0"
-          },
-          "to": [
-            {
-              "key_code": "f10"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "hyphen"
-          },
-          "to": [
-            {
-              "key_code": "f11"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "equal_sign"
-          },
-          "to": [
-            {
-              "key_code": "f12"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "1",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f1",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f2",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f3",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "4",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f4",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "5",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f5",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "6",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f6",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "7",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f7",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "8",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f8",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "9",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f9",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f10",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "hyphen",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f11",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "equal_sign",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f12",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "1",
             "modifiers": {
               "mandatory": [
@@ -550,293 +22,7 @@
             {
               "key_code": "f1",
               "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": [
                 "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f2",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f3",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "4",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f4",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "5",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f5",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "6",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f6",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "7",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f7",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "8",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f8",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "9",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f9",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f10",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "hyphen",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f11",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "multitouch_extension_finger_count_total",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "equal_sign",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f12",
-              "modifiers": [
-                "left_shift"
               ]
             }
           ],
@@ -862,7 +48,173 @@
             {
               "key_code": "f1",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f1",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -888,7 +240,173 @@
             {
               "key_code": "f2",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -914,7 +432,173 @@
             {
               "key_code": "f3",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f3",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -940,7 +624,173 @@
             {
               "key_code": "f4",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f4",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -966,7 +816,173 @@
             {
               "key_code": "f5",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f5",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -992,7 +1008,173 @@
             {
               "key_code": "f6",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f6",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1018,7 +1200,173 @@
             {
               "key_code": "f7",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f7",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1044,7 +1392,173 @@
             {
               "key_code": "f8",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f8",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1070,7 +1584,173 @@
             {
               "key_code": "f9",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f9",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1096,7 +1776,173 @@
             {
               "key_code": "f10",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f10",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1122,7 +1968,173 @@
             {
               "key_code": "f11",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f11",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "shift"
               ]
             }
           ],
@@ -1148,7 +2160,147 @@
             {
               "key_code": "f12",
               "modifiers": [
-                "left_control"
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "control",
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "shift",
+                "control",
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "shift",
+                "control",
+                "command"
               ]
             }
           ],

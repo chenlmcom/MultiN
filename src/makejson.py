@@ -1,6 +1,71 @@
 #!/usr/bin/python
 import json
 import configparser
+import copy
+
+def genManTos(to, modifiers):
+  """
+  生成manipulators to_event
+  """
+  tos = to.split(",")
+  manTos = []
+  for key in tos:
+    toMethod = key.split(":")
+    manTo = {}
+    if len(toMethod) == 2:
+      cmd = toMethod[0]
+      if cmd == 'shell':
+        manTo["shell_command"] = toMethod[1]
+      elif cmd == 'button':
+        manTo["pointing_button"] = toMethod[1]
+      elif cmd == 'mouse':
+        move = toMethod[1].split(' ')
+        manTo["mouse_key"] = {
+              "x": move[0],
+              "y": move[1],
+              "vertical_wheel": move[2],
+              "horizontal_wheel": move[3],
+              "speed_multiplier": 1.0
+          }
+    else:
+      # key_code
+      if key.find(" ") != -1:
+        keys = key.split(" ")
+        # print(tos[0:len(tos) - 1])
+        manTo["key_code"] = keys[len(keys) - 1]
+        manTo["modifiers"] = keys[0:len(keys) - 1]
+      else:
+        manTo["key_code"] = key
+    if len(modifiers):
+      copyManTo = copy.deepcopy(manTo)
+      manTos.append(copyManTo)
+      if 'modifiers' in copyManTo:
+        copyManTo['modifiers'].extend(modifiers)
+      else:
+        copyManTo['modifiers'] = modifiers
+    else:
+      manTos.append(manTo)
+  return manTos
+
+def combine(li):
+  '''
+  生成列表组合
+  '''
+  reli = []
+  for i in range(0, len(li)):
+    if i == 0:
+      reli.append([li[i]])
+      # print(reli) [['a']]
+    else:
+      addli = []
+      #增加单个的字符
+      addli.append([li[i]])
+      for ii in reli:
+          addli.append(ii+[li[i]])
+          # 如果有序
+          # addli.append([li[i]] + ii)
+      reli += addli
+  return reli
 
 configFile = 'config.ini'
 distFile = '../dist/multi_n.json'
@@ -46,67 +111,56 @@ for sec in secs:
       if option in ['total', 'desc', 'apps', 'lower_half_area', 'upper_half_area', 'left_half_area', 'right_half_area']:
         continue
       to = cf.get(sec, option)
-      tos = to.split(",")
-      manTos = []
-      for key in tos:
-        toMethod = key.split(":")
-        if len(toMethod) == 2:
-          cmd = toMethod[0]
-          if cmd == 'shell':
-            manTos.append({
-              "shell_command": toMethod[1]
-            })
-          elif cmd == 'button':
-            manTos.append({
-              "pointing_button": toMethod[1]
-            })
-          elif cmd == 'mouse':
-            move = toMethod[1].split(' ')
-            manTos.append({
-              "mouse_key": {
-                  "x": move[0],
-                  "y": move[1],
-                  "vertical_wheel": move[2],
-                  "horizontal_wheel": move[3],
-                  "speed_multiplier": 1.0
+      froms = option.split('-') # 以-分割，
+      if len(froms) >= 1:
+        key = froms[len(froms) -1] # 最后一项为固定按键
+        if len(froms) > 1: # 有同步按键时
+          syncModifiers = combine(froms[0:len(froms) - 1]) # 前面几项为同步按键组合
+          for syncModifier in syncModifiers:
+            manTos = genManTos(to, syncModifier)
+            manipulator = {
+              "type": "basic",
+              "from": {},
+              "to": manTos,
+              "conditions": conditions
+            }
+            manipulators.append(manipulator)
+            modifiers = copy.deepcopy(syncModifier)
+            # 固定按键中含有.为组合键
+            if key.find(".") != -1:
+              keys = key.split(".")
+              key_code = keys[len(keys) - 1]
+              modifiers.extend(keys[0:len(keys) - 1])
+            else:
+              key_code = key
+            manipulator["from"] = {
+              "key_code": key_code,
+              "modifiers": {
+                "mandatory": modifiers
               }
-            })
+            }
         else:
-          # key_code
-          if key.find(" ") != -1:
-            keys = key.split(" ")
-            # print(tos[0:len(tos) - 1])
-            manTos.append({
-              "key_code": keys[len(keys) - 1],
-              "modifiers": keys[0:len(keys) - 1]
-            })
+          manTos = genManTos(to, [])
+          manipulator = {
+            "type": "basic",
+            "from": {},
+            "to": manTos,
+            "conditions": conditions
+          }
+          manipulators.append(manipulator)
+          # 固定按键中含有.为组合键
+          if key.find(".") != -1:
+            keys = key.split(".")
+            key_code = keys[len(keys) - 1]
+            modifiers = keys[0:len(keys) - 1]
+            manipulator["from"] = {
+              "key_code": key_code,
+              "modifiers": {
+                "mandatory": modifiers
+              }
+            }
           else:
-            manTos.append({
-              "key_code": key
-            })
-
-      if option.find(".") != -1:
-        froms = option.split(".")
-        manipulators.append({
-              "type": "basic",
-              "from": {
-                "key_code": froms[len(froms) - 1],
-                "modifiers": {
-                  "mandatory": froms[0:len(froms) - 1]
-                }
-              },
-              "to": manTos,
-              "conditions": conditions
-            })
-      else:
-        manipulators.append({
-              "type": "basic",
-              "from": {
-                "key_code": option,
-              },
-              "to": manTos,
-              "conditions": conditions
-            })
+            manipulator["from"] = {"key_code": key}
     # rule
     desc = ""
     if 'desc' in options:
