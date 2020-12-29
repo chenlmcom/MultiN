@@ -146,6 +146,7 @@ for sec in secs:
         key = froms[len(froms) -1] # 最后一项为固定按键
         if len(froms) > 1: # 有同步按键时
           syncModifiers = combine(froms[0:len(froms) - 1]) # 前面几项为同步按键组合
+          syncModifiers.append([])
           for syncModifier in syncModifiers:
             manTos = genManTos(to, syncModifier)
             modifiers = copy.deepcopy(syncModifier)
