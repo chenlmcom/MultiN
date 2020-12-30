@@ -68,15 +68,15 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'S', 'Move Cursor to TopLeft',
  function() moveCursor("left") end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'D', 'Move Cursor to Center',
  function()
-    local mpos = hs.mouse.getAbsolutePosition()
+    --[[ local mpos = hs.mouse.getAbsolutePosition()
     local cscreen = hs.mouse.getCurrentScreen()
     local cres = cscreen:fullFrame()
     local rect = hs.geometry.rect(cres.x + cres.w/2, cres.y + cres.h/2, 10, 10)
     if contains(rect, mpos) then
         moveCursorNextScreen()
-    else
+    else ]]
         moveCursor("center")
-    end
+    -- end
  end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'F', 'Move Cursor to TopLeft',
  function() moveCursor("right") end)
