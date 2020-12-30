@@ -3013,6 +3013,42 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "pointing_button": "button4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "pointing_button": "button5"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "spacebar"
           },
           "to": [
