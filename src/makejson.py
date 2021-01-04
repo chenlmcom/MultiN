@@ -85,13 +85,24 @@ def manipulator(key, modifiers, manTos, conditions):
   # 固定按键中含有.为组合键
   if key.find(".") != -1:
     keys = key.split(".")
-    if keys[0] in allModifiers:
-      key_code = keys[len(keys) - 1]
-      mod.extend(keys[0:len(keys) - 1])
+    keyCodeCount = 0
     for k in keys:
-      simultaneous.append({
-        "key_code": k
-      })
+      if k in allModifiers:
+        mod.append(k)
+      else:
+        keyCodeCount += 1
+        # 判断普通按键数
+        if (keyCodeCount <= 1):
+          key_code = k
+        else:
+          if key_code:
+            simultaneous.append({
+              "key_code": key_code
+            })
+            key_code = ''
+          simultaneous.append({
+            "key_code": k
+          })
   else:
     key_code = key
 
@@ -102,6 +113,13 @@ def manipulator(key, modifiers, manTos, conditions):
     fromKeys["modifiers"] = { "mandatory": mod }
   if simultaneous:
     fromKeys["simultaneous"] = simultaneous
+    # fromKeys["simultaneous_options"] = {
+    #   "key_up_order": "insensitive",
+    #   "key_down_order": "insensitive"
+    # }
+    # manipulator["parameters"] = {
+    #   "basic.simultaneous_threshold_milliseconds": 1000
+    # }
   manipulator["from"] = fromKeys
   return manipulator
 
