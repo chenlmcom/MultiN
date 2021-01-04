@@ -3,6 +3,8 @@ import json
 import configparser
 import copy
 
+allModifiers = ['caps_lock','left_command','left_control','left_option','left_shift','right_command','right_control','right_option','right_shift','fn','command','control','option','shift','left_alt','left_gui','right_alt','right_gui','any']
+
 def genManTos(to, modifiers):
   """
   生成manipulators to_event
@@ -78,23 +80,29 @@ def manipulator(key, modifiers, manTos, conditions):
     "conditions": conditions
   }
   mod = copy.deepcopy(modifiers)
+  simultaneous = []
+  key_code = ''
   # 固定按键中含有.为组合键
   if key.find(".") != -1:
     keys = key.split(".")
-    key_code = keys[len(keys) - 1]
-    mod.extend(keys[0:len(keys) - 1])
+    if keys[0] in allModifiers:
+      key_code = keys[len(keys) - 1]
+      mod.extend(keys[0:len(keys) - 1])
+    for k in keys:
+      simultaneous.append({
+        "key_code": k
+      })
   else:
     key_code = key
 
+  fromKeys = {}
+  if key_code:
+    fromKeys["key_code"] = key_code
   if mod:
-    manipulator["from"] = {
-      "key_code": key_code,
-      "modifiers": {
-        "mandatory": mod
-      }
-    }
-  else:
-    manipulator["from"] = { "key_code": key_code }
+    fromKeys["modifiers"] = { "mandatory": mod }
+  if simultaneous:
+    fromKeys["simultaneous"] = simultaneous
+  manipulator["from"] = fromKeys
   return manipulator
 
 configFile = 'config.ini'
