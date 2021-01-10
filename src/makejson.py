@@ -12,9 +12,9 @@ def genManTos(to, modifiers):
   tos = to.split(",")
   manTos = []
   for key in tos:
-    toMethod = key.split(":")
     manTo = {}
-    if len(toMethod) == 2:
+    if key.find(":") != -1:
+      toMethod = key.split(":")
       cmd = toMethod[0]
       if cmd == 'shell':
         manTo["shell_command"] = toMethod[1]
@@ -29,6 +29,14 @@ def genManTos(to, modifiers):
               "horizontal_wheel": move[3],
               "speed_multiplier": 1.0
           }
+      elif cmd == 'set':
+        # print('toMethod', toMethod, toMethod[1])
+        name = toMethod[1].split(".")[0]
+        value = toMethod[1].split(".")[1]
+        manTo["set_variable"] = {
+          "name": name,
+          "value": int(value)
+        }
     else:
       # key_code
       if key.find(" ") != -1:

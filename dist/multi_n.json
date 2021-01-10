@@ -5,6 +5,32 @@
   ],
   "rules": [
     {
+      "description": "Multi_F Mode: Extend Keyboard",
+      "available_since": "12.6.9",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mode",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
       "description": "Multi_1 Mode: Extend Keyboard",
       "available_since": "12.6.9",
       "manipulators": [
@@ -10878,6 +10904,9 @@
               "modifiers": [
                 "left_control"
               ]
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -10911,6 +10940,9 @@
               "modifiers": [
                 "left_control"
               ]
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -10944,6 +10976,9 @@
               "modifiers": [
                 "left_control"
               ]
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -10977,6 +11012,9 @@
               "modifiers": [
                 "left_control"
               ]
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11007,6 +11045,9 @@
             },
             {
               "key_code": "h"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11037,6 +11078,9 @@
             },
             {
               "key_code": "j"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11067,6 +11111,9 @@
             },
             {
               "key_code": "k"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11097,6 +11144,9 @@
             },
             {
               "key_code": "l"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11127,6 +11177,9 @@
             },
             {
               "key_code": "h"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11157,6 +11210,9 @@
             },
             {
               "key_code": "j"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11187,6 +11243,9 @@
             },
             {
               "key_code": "k"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -11217,6 +11276,9 @@
             },
             {
               "key_code": "l"
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [
