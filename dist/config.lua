@@ -172,6 +172,7 @@ function showMouse()
     end):start()
 end
 
+lpos = {x=0, y=0}
 --[[ 移动鼠标到屏幕的相应位置 ]]
 function moveCursor(option)
     -- local cwin = hs.window.focusedWindow()
@@ -189,26 +190,41 @@ function moveCursor(option)
         -- w = wf.w
         -- h = wf.h
     -- end
+    local cpos = hs.mouse.getAbsolutePosition()
+    npos = cpos
     if option == "top" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/7})
+        npos = {x=x+w/2, y=y+h/7}
     elseif option == "bottom" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h*6/7})
+        npos = {x=x+w/2, y=y+h*6/7}
     elseif option == "left" then
-        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h/2})
+        npos = {x=x+w/7, y=y+h/2}
     elseif option == "right" then
-        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h/2})
+        npos = {x=x+w*6/7, y=y+h/2}
     elseif option == "topLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h/7})
+        npos = {x=x+w/7, y=y+h/7}
     elseif option == "topRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h/7})
+        npos = {x=x+w*6/7, y=y+h/7}
     elseif option == "bottomLeft" then
-        hs.mouse.setAbsolutePosition({x=x+w/7, y=y+h*6/7})
+        npos = {x=x+w/7, y=y+h*6/7}
     elseif option == "bottomRight" then
-        hs.mouse.setAbsolutePosition({x=x+w*6/7, y=y+h*6/7})
+        npos = {x=x+w*6/7, y=y+h*6/7}
     elseif option == "center" then
-        hs.mouse.setAbsolutePosition({x=x+w/2, y=y+h/2})
+        npos = {x=x+w/2, y=y+h/2}
     end
+    -- hs.alert('cpos: ' .. cpos.x .. "," .. npos.y)
+    -- hs.alert('npos: ' .. npos.x .. "," .. npos.y)
+    if isSame(cpos, npos) then
+        -- hs.alert('lpos: ' .. lpos.x .. "," .. lpos.y)
+        npos = lpos
+    else
+        lpos = cpos
+    end
+    hs.mouse.setAbsolutePosition(npos)
     showMouse()
+end
+
+function isSame(cpos, npos)
+    return (cpos.x - npos.x)^2 < 10 and (cpos.y - npos.y)^2 < 10
 end
 
 -- 居中鼠标到聚焦的窗口，或者到屏幕中心
