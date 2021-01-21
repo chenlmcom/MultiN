@@ -93,9 +93,17 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'B', 'Show Cursor',
 hs.hotkey.bind({'cmd', 'alt', 'ctrl'}, 'Z', 'Center Cursor',
  function() centerCursor() end)
 
- -- 切换深色模式
- hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'tab', 'Toggle Dark Mode',
- function() toggleTheme() end)
+-- 显示键盘模式
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '1', 'Show Mode Icon 1', function() showMode(1) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '2', 'Show Mode Icon 1', function() showMode(2) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '3', 'Show Mode Icon 1', function() showMode(3) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '4', 'Show Mode Icon 1', function() showMode(4) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '5', 'Show Mode Icon 1', function() showMode(5) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '6', 'Show Mode Icon 1', function() showMode(6) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '7', 'Show Mode Icon 1', function() showMode(7) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '8', 'Show Mode Icon 1', function() showMode(8) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '9', 'Show Mode Icon 1', function() showMode(9) end)
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '0', 'Show Mode Icon 1', function() showMode(0) end)
 
 function toggleTheme()
     local success, darkMode = hs.osascript.applescript('tell application "System Events" to tell appearance preferences to get dark mode')
@@ -170,6 +178,39 @@ function showMouse()
     hs.timer.delayed.new(0.5, function()
         show:hide(0.5)
     end):start()
+end
+
+-- [[ 显示键盘模式 ]]
+mode_tray = hs.canvas.new({x = 0, y = 0, w = 0, h = 0})
+function showMode(mode)
+    local cscreen = hs.mouse.getCurrentScreen()
+    local cres = cscreen:fullFrame()
+    mode_tray:frame(cscreen:localToAbsolute{
+        x = cres.w - 80,
+        y = cres.h - 80,
+        w = 40,
+        h = 40
+    })
+    mode_tray[1] = {
+            action = "fill",
+            center = { x = "0.5", y = "0.5" },
+            fillColor = { alpha = 0.6, red = 1.0 },
+            radius = ".5",
+            type = "circle",
+        }
+    mode_tray[2] = {
+        type = "text",
+        text = mode,
+        textFont = "Courier-Bold",
+        textSize = 28,
+        textColor = {hex = "#2390FF", alpha = 1},
+        textAlignment = "center",
+    }
+    if mode == 0 then
+        mode_tray:hide()
+    else
+        mode_tray:show()
+    end
 end
 
 lpos = {x=0, y=0}
@@ -301,6 +342,10 @@ end
 
 function moveToScreen(direction)
     local cwin = hs.window.focusedWindow()
+    local isFullscreen = cwin:isFullScreen()
+    if isFullscreen then
+        cwin:toggleFullScreen()
+    end
     if cwin then
         local cscreen = cwin:screen()
         if direction == "up" then
@@ -313,6 +358,9 @@ function moveToScreen(direction)
             cwin:moveOneScreenEast()
         elseif direction == "next" then
             cwin:moveToScreen(cscreen:next())
+        end
+        if isFullscreen then
+            cwin:toggleFullScreen()
         end
         centerCursor()
     else
