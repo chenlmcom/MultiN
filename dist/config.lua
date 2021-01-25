@@ -105,6 +105,10 @@ hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '8', 'Show Mode Icon 1', functio
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '9', 'Show Mode Icon 1', function() showMode(9) end)
 hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, '0', 'Show Mode Icon 1', function() showMode(0) end)
 
+-- 切换深色模式
+hs.hotkey.bind({'cmd', 'alt', 'ctrl', 'shift'}, 'tab', 'Toggle Dark Mode',
+ function() toggleTheme() end)
+
 function toggleTheme()
     local success, darkMode = hs.osascript.applescript('tell application "System Events" to tell appearance preferences to get dark mode')
     if darkMode then
@@ -344,20 +348,21 @@ function moveToScreen(direction)
     local cwin = hs.window.focusedWindow()
     local isFullscreen = cwin:isFullScreen()
     if isFullscreen then
-        cwin:toggleFullScreen()
+        cwin = cwin:toggleFullScreen()
+        sleep(1)
     end
     if cwin then
         local cscreen = cwin:screen()
         if direction == "up" then
-            cwin:moveOneScreenNorth()
+            cwin = cwin:moveOneScreenNorth()
         elseif direction == "down" then
-            cwin:moveOneScreenSouth()
+            cwin = cwin:moveOneScreenSouth()
         elseif direction == "left" then
-            cwin:moveOneScreenWest()
+            cwin = cwin:moveOneScreenWest()
         elseif direction == "right" then
-            cwin:moveOneScreenEast()
+            cwin = cwin:moveOneScreenEast()
         elseif direction == "next" then
-            cwin:moveToScreen(cscreen:next())
+            cwin = cwin:moveToScreen(cscreen:next())
         end
         if isFullscreen then
             cwin:toggleFullScreen()
@@ -365,5 +370,11 @@ function moveToScreen(direction)
         centerCursor()
     else
         hs.alert.show("No focused window!")
+    end
+end
+
+function sleep(n)
+    if n > 0 then
+        os.execute("ping -i 0.6 -c " .. tonumber(n+1) .. " localhost > NULL")
     end
 end
