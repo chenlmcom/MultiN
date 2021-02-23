@@ -149,18 +149,19 @@ end
 --[[ 聚焦当前屏幕最前面的窗口 ]]
 function focusWindowTop()
     local cscreen = hs.mouse.getCurrentScreen()
+    local cres = cscreen:fullFrame()
     local cpos = hs.mouse.getAbsolutePosition()
     local windows = hs.window.orderedWindows()
-    local focused = true
+    local notFocused = true
     for i, window in ipairs(windows) do
         local wrect = window:frame()
-        if contains(wrect, cpos) then
+        if contains(cres, wrect) then
             window:focus()
-            focused = false
+            notFocused = false
             break
         end
     end
-    if (focused) then
+    if (notFocused) then
         hs.window.desktop():focus()
     end
 end
