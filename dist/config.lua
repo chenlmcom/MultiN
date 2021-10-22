@@ -220,6 +220,8 @@ end
 
 lpos = {x=0, y=0}
 --[[ 移动鼠标到屏幕的相应位置 ]]
+m_h = 30 -- 水平边距
+m_v = 30 -- 垂直边距
 function moveCursor(option)
     -- local cwin = hs.window.focusedWindow()
     -- local wf = cwin:frame()
@@ -239,21 +241,21 @@ function moveCursor(option)
     local cpos = hs.mouse.getAbsolutePosition()
     npos = cpos
     if option == "top" then
-        npos = {x=x+w/2, y=y+h/7}
+        npos = {x=x+w/2, y=y+m_v}
     elseif option == "bottom" then
-        npos = {x=x+w/2, y=y+h*6/7}
+        npos = {x=x+w/2, y=y+h-m_v}
     elseif option == "left" then
-        npos = {x=x+w/7, y=y+h/2}
+        npos = {x=x+m_h, y=y+h/2}
     elseif option == "right" then
-        npos = {x=x+w*6/7, y=y+h/2}
+        npos = {x=x+w-m_h, y=y+h/2}
     elseif option == "topLeft" then
-        npos = {x=x+w/7, y=y+h/7}
+        npos = {x=x+m_h, y=y+m_v}
     elseif option == "topRight" then
-        npos = {x=x+w*6/7, y=y+h/7}
+        npos = {x=x+w-m_h, y=y+m_v}
     elseif option == "bottomLeft" then
-        npos = {x=x+w/7, y=y+h*6/7}
+        npos = {x=x+m_h, y=y+h-m_v}
     elseif option == "bottomRight" then
-        npos = {x=x+w*6/7, y=y+h*6/7}
+        npos = {x=x+w-m_h, y=y+h-m_v}
     elseif option == "center" then
         npos = {x=x+w/2, y=y+h/2}
     end
