@@ -21280,6 +21280,33 @@
               ]
             }
           ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.finder"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -21295,6 +21322,34 @@
           "to": [
             {
               "key_code": "d",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.mail"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "m",
               "modifiers": [
                 "left_command",
                 "left_shift"
@@ -22284,6 +22339,148 @@
       ]
     },
     {
+      "description": "Multi_2 Safari Mode: Application Operations",
+      "available_since": "12.6.9",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.Safari"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.Safari"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.Safari"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.Safari"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "z"
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.apple.Safari"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Multi_2 Mode: All Application Operations",
       "available_since": "12.6.9",
       "manipulators": [
@@ -22613,6 +22810,28 @@
               "key_code": "spacebar",
               "modifiers": [
                 "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n"
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": [
+                "left_command",
+                "left_control"
               ]
             }
           ],
